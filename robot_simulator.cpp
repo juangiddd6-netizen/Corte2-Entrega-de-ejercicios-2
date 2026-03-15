@@ -1,3 +1,4 @@
+#include <iostream>
 #include <string>
 using namespace std;
 
@@ -46,3 +47,15 @@ public:
     int getY() { return y; }
     string getDirection() { return direction; }
 };
+
+int main() {
+
+    Robot robot(7, 3, "north");
+
+    robot.execute("RAALAL");
+
+    cout << "Posicion final: {" << robot.getX() << "," << robot.getY() << "}" << endl;
+    cout << "Direccion final: " << robot.getDirection() << endl;
+
+    return 0;
+}
